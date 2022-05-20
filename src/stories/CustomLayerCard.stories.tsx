@@ -25,15 +25,16 @@ Unselected.args = {
     border: '0px',
 }
 
-Selected.args = {
-    text: 'Flood zone 3',
-    img: CardMedia,
-    border: '2px',
-}
-
 Hover.args = {
     text: 'Flood zone 3',
     img: CardMedia,
     border: '1px',
+}
+
+Selected.args = {
+    text: 'Flood zone 3',
+    img: CardMedia,
+    border: '1px',
+    boxShadow: '0px 0px 0px 2px #65E9D9;'
 }
 

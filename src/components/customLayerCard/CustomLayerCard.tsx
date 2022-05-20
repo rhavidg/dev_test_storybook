@@ -11,12 +11,15 @@ interface CustomLayerCardProps {
     checked: boolean;
     text: string;
     border: string,
+    boxShadow?: string,
 }
-export const CustomLayerCard = ({ img, checked, text, border }: CustomLayerCardProps) => (
+export const CustomLayerCard = ({ img, checked, text, border, boxShadow }: CustomLayerCardProps) => (
     <Card sx={{
-        maxWidth: 345,
+        maxWidth: 229,
+        maxHeight: 170,
         border: border + ' solid ' + theme.palette.primary.main,
         borderRadius: 2,
+        boxShadow: boxShadow ? boxShadow : ''
     }}
     >
         <CardMedia component="img" image={img} alt="" sx={{borderRadiusTop: 2}}  />
