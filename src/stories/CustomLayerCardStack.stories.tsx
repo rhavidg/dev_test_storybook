@@ -16,7 +16,7 @@ export default {
 const Template: ComponentStory<any> = (args) => (
     <CustomLayerCardStack>
         {args.cards.map((card:any) => {
-            return <CustomLayerCard checked={card.checked} text={card.text} img={card.img} border={card.border}/>
+            return <CustomLayerCard checked={card.checked} text={card.text} img={card.img} border={card.border} boxShadow={card.boxShadow}/>
         })}
     </CustomLayerCardStack>
    
@@ -26,24 +26,25 @@ export const AllStates = Template.bind({})
 AllStates.args={
     cards: [
         {
-            text: 'Card1',
+            text: 'Card Unselected',
             img: CardMedia,
             checked: false,
             border: '0px',
         },
         {
-            text: 'Card2',
+            text: 'Card Hover',
+            img: CardMedia,
+            checked: true,
+            border: '0px',
+            boxShadow: '0px 0px 0px 2px'
+        },
+        {
+            text: 'Card Selected',
             img: CardMedia,
             checked: true,
             border: '1px',
-        },
-        {
-            text: 'Card3',
-            img: CardMedia,
-            checked: true,
-            border: '2px',
+            boxShadow: '0px 0px 0px 2px'
         }
     ]
-        
-    
+      
 }

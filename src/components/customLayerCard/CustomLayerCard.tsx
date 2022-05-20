@@ -19,7 +19,7 @@ export const CustomLayerCard = ({ img, checked, text, border, boxShadow }: Custo
         maxHeight: 170,
         border: border + ' solid ' + theme.palette.primary.main,
         borderRadius: 2,
-        boxShadow: boxShadow ? boxShadow : ''
+        boxShadow: boxShadow ? boxShadow + ' ' + theme.palette.primary.main : ''
     }}
     >
         <CardMedia component="img" image={img} alt="" sx={{borderRadiusTop: 2}}  />

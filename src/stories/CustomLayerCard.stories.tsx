@@ -28,13 +28,14 @@ Unselected.args = {
 Hover.args = {
     text: 'Flood zone 3',
     img: CardMedia,
-    border: '1px',
+    border: '0px',
+    boxShadow: '0px 0px 0px 2px'
 }
 
 Selected.args = {
     text: 'Flood zone 3',
     img: CardMedia,
     border: '1px',
-    boxShadow: '0px 0px 0px 2px #65E9D9;'
+    boxShadow: '0px 0px 0px 2px'
 }
 
