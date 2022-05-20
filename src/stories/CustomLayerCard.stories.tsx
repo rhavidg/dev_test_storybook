@@ -22,7 +22,7 @@ export const Hover = Template.bind({})
 Unselected.args = {
     text: 'Flood zone 3',
     img: CardMedia,
-    border: '0px',
+    border: '1px solid #EFEFEF',
 }
 
 Hover.args = {

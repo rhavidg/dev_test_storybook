@@ -29,7 +29,7 @@ AllStates.args={
             text: 'Card Unselected',
             img: CardMedia,
             checked: false,
-            border: '0px',
+            border: '1px solid #EFEFEF;',
         },
         {
             text: 'Card Hover',

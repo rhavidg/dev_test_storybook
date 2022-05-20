@@ -15,16 +15,17 @@ interface CustomLayerCardProps {
 }
 export const CustomLayerCard = ({ img, checked, text, border, boxShadow }: CustomLayerCardProps) => (
     <Card sx={{
-        maxWidth: 229,
-        maxHeight: 170,
         border: border + ' solid ' + theme.palette.primary.main,
         borderRadius: 2,
-        boxShadow: boxShadow ? boxShadow + ' ' + theme.palette.primary.main : ''
+        boxShadow: boxShadow ? boxShadow + ' ' + theme.palette.primary.main : '',
+        maxWidth: 229,
     }}
     >
-        <CardMedia component="img" image={img} alt="" sx={{borderRadiusTop: 2}}  />
-        <CardContent>
-            <Checkbox checked={checked} sx={{color: theme.palette.primary.main}} />
+        <CardMedia component="img" image={img} alt="" sx={{borderRadiusTop: 2, height: 100, width: 229}}/>
+        <CardContent sx={{padding: 0,"&:last-child": { paddingBottom: 0 }, display: 'flex', alignItems: 'center'}}>
+            <Checkbox checked={checked} sx={{'&.Mui-checked': {
+      color: theme.palette.primary.main,
+    },}} />
             <Typography variant="body2" component="span">
                 {text}
             </Typography>
