@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
@@ -14,7 +14,6 @@ interface CustomLayerCardProps {
     boxShadow?: string,
 }
 export const CustomLayerCard = ({ img, checked, text, border, boxShadow }: CustomLayerCardProps) => {
-    const [active,setActive] = useState(false);
     return (
     <Card sx={{
         border: border + ' solid ' + theme.palette.primary.main,
@@ -30,7 +29,7 @@ export const CustomLayerCard = ({ img, checked, text, border, boxShadow }: Custo
         <CardContent sx={{padding: 0,"&:last-child": { paddingBottom: 0 }, display: 'flex', alignItems: 'center'}}>
             <Checkbox checked={checked} sx={{'&.Mui-checked': {
       color: theme.palette.primary.main,
-    },}} />
+    }}} />
             <Typography variant="body2" component="div">
                 {text}
             </Typography>

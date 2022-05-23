@@ -1,7 +1,7 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import CardMedia from '../../images/CardMedia.png'
-import CustomLayerCard from '../components/customLayerCard/CustomLayerCard';
-import CustomLayerCardStack from '../components/customLayerCardStack/CustomLayerCardStack';
+import CardMedia from '../Assets/CardMedia.png';
+import CustomLayerCard from '../Components/CustomLayerCard/CustomLayerCard';
+import CustomLayerCardStack from '../Components/CustomLayerCardStack/CustomLayerCardStack';
 
 export default {
     title: 'Custom Layer Card Stack',

@@ -1,6 +1,6 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import CardMedia from '../../images/CardMedia.png'
-import CustomLayerCard from '../components/customLayerCard/CustomLayerCard';
+import CardMedia from '../Assets/CardMedia.png'
+import CustomLayerCard from '../Components/CustomLayerCard/CustomLayerCard';
 
 export default {
     title: 'Custom Layer Card',
@@ -9,9 +9,6 @@ export default {
 } as ComponentMeta<any>
 
 const Template: ComponentStory<any> = (args) => <CustomLayerCard {...args} />;
-
-
-
 
 export const Unselected = Template.bind({})
 
