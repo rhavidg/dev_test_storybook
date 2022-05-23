@@ -31,7 +31,7 @@ export const CustomLayerCard = ({ img, checked, text, border, boxShadow }: Custo
             <Checkbox checked={checked} sx={{'&.Mui-checked': {
       color: theme.palette.primary.main,
     },}} />
-            <Typography variant="body2" component="span">
+            <Typography>
                 {text}
             </Typography>
         </CardContent>
