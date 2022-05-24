@@ -29,14 +29,15 @@ export const CustomLayerCard = ({ img, checked, text, border, boxShadow }: Custo
       }}
     >
       <CardMedia component="img" image={img} alt="" sx={{ borderRadiusTop: 2, height: 100, width: 229 }} />
-      <CardContent sx={{ padding: 0, "&:last-child": { paddingBottom: 0 }, display: "flex", alignItems: "center" }}>
+      <CardContent sx={{ padding: 0, height: 50, "&:last-child": { paddingBottom: 0 }, display: "flex", alignItems: "center" }}>
         <Checkbox
           checked={checkboxState}
           sx={{
             "&.Mui-checked": {
               color: theme.palette.primary.main
-            }
+            },
           }}
+          size="small"
           onClick={() => setCheckboxState(!checkboxState)}
         />
         <Typography variant="body2" component="div">
