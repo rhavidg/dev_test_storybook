@@ -10,17 +10,15 @@ interface CustomLayerCardProps {
   img: string
   checked: boolean
   text: string
-  border?: string
-  boxShadow?: string
 }
-export const CustomLayerCard = ({ img, checked, text, border, boxShadow }: CustomLayerCardProps) => {
+export const CustomLayerCard = ({ img, checked, text }: CustomLayerCardProps) => {
   const [checkboxState, setCheckboxState] = useState(checked)
   return (
     <Card
       sx={{
-        border: border ? border + " solid " + theme.palette.primary.main : '1px solid #EFEFEF',
+        border: checked ? '1px solid ' + theme.palette.primary.dark : '1px solid #EFEFEF',
         borderRadius: 2,
-        boxShadow: boxShadow ? boxShadow + " " + theme.palette.primary.main : "none",
+        boxShadow: checked ? '0px 0px 0px 2px ' + theme.palette.primary.main : 'none',
         maxWidth: 229,
         "&:hover": {
           border: "0px",

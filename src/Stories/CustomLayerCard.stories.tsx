@@ -18,15 +18,13 @@ export const Hover = Template.bind({})
 Unselected.args = {
   text: "Flood zone 3",
   img: CardMedia,
-  border: "1px solid #EFEFEF"
 }
 
 Hover.args = {
   text: "Flood zone 3",
   img: CardMedia,
-  border: "0px",
-  boxShadow: "0px 0px 0px 2px"
 }
+Hover.parameters = {pseudo: {hover: true}}
 
 Selected.args = {
   text: "Flood zone 3",

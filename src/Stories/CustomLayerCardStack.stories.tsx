@@ -3,6 +3,12 @@ import CardMedia from "../Assets/CardMedia.png"
 import CustomLayerCard from "../Components/CustomLayerCard/CustomLayerCard"
 import CustomLayerCardStack from "../Components/CustomLayerCardStack/CustomLayerCardStack"
 
+interface CardProps {
+  text: string,
+  img: string,
+  checked: boolean
+}
+
 export default {
   title: "Custom Layer Card Stack",
   component: CustomLayerCardStack,
@@ -15,8 +21,8 @@ export default {
 
 const Template: ComponentStory<any> = (args) => (
   <CustomLayerCardStack>
-    {args.cards.map((card: any) => {
-      return <CustomLayerCard checked={card.checked} text={card.text} img={card.img} border={card.border} boxShadow={card.boxShadow} />
+    {args.cards.map((card: CardProps) => {
+      return <CustomLayerCard checked={card.checked} text={card.text} img={card.img} />
     })}
   </CustomLayerCardStack>
 )
@@ -28,21 +34,16 @@ AllStates.args = {
       text: "Card Unselected",
       img: CardMedia,
       checked: false,
-      border: "1px solid #EFEFEF;"
     },
     {
       text: "Card Hover",
       img: CardMedia,
       checked: true,
-      border: "0px",
-      boxShadow: "0px 0px 0px 2px"
     },
     {
       text: "Card Selected",
       img: CardMedia,
       checked: true,
-      border: "1px",
-      boxShadow: "0px 0px 0px 2px"
     }
   ]
 }
