@@ -32,5 +32,6 @@ Selected.args = {
   text: "Flood zone 3",
   img: CardMedia,
   border: "1px",
-  boxShadow: "0px 0px 0px 2px"
+  boxShadow: "0px 0px 0px 2px",
+  checked: true
 }

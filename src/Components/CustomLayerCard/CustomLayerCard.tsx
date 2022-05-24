@@ -18,9 +18,9 @@ export const CustomLayerCard = ({ img, checked, text, border, boxShadow }: Custo
   return (
     <Card
       sx={{
-        border: border + " solid " + theme.palette.primary.main,
+        border: border ? border + " solid " + theme.palette.primary.main : '1px solid #EFEFEF',
         borderRadius: 2,
-        boxShadow: boxShadow ? boxShadow + " " + theme.palette.primary.main : "",
+        boxShadow: boxShadow ? boxShadow + " " + theme.palette.primary.main : "none",
         maxWidth: 229,
         "&:hover": {
           border: "0px",
@@ -29,14 +29,14 @@ export const CustomLayerCard = ({ img, checked, text, border, boxShadow }: Custo
       }}
     >
       <CardMedia component="img" image={img} alt="" sx={{ borderRadiusTop: 2, height: 100, width: 229 }} />
-      <CardContent sx={{ padding: 0, height: 50, "&:last-child": { paddingBottom: 0 }, display: "flex", alignItems: "center" }}>
+      <CardContent sx={{ padding: '2px 7px 2px 7px', height: 50, "&:last-child": { paddingBottom: 0 }, display: "flex", alignItems: "center" }}>
         <Checkbox
           checked={checkboxState}
           sx={{
             "&.Mui-checked": {
               color: theme.palette.primary.main
             },
-            '& .MuiSvgIcon-root': { fontSize: 18 }
+            '& .MuiSvgIcon-root': { fontSize: 18 },
           }}
           onClick={() => setCheckboxState(!checkboxState)}
         />
