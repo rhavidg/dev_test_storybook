@@ -36,7 +36,7 @@ export const CustomLayerCard = ({ img, checked, text, border, boxShadow }: Custo
             "&.Mui-checked": {
               color: theme.palette.primary.main
             },
-            '& .MuiSvgIcon-root': { fontSize: 13.5 }
+            '& .MuiSvgIcon-root': { fontSize: 18 }
           }}
           onClick={() => setCheckboxState(!checkboxState)}
         />
